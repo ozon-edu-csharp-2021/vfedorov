@@ -17,12 +17,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6D618DC2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{38FF7C54-E95E-4E1C-A670-EC9B70EC5DE6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OzonEdu.MerchandiseApi", "src\OzonEdu.MerchandiseApi\OzonEdu.MerchandiseApi.csproj", "{00894254-B1D4-4D78-B6E4-DAE0F13C115F}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{DC576C3E-A25A-4703-B5BC-66FDFD3A48BB}"
 	ProjectSection(SolutionItems) = preProject
 		deploy\docker-compose.yml = deploy\docker-compose.yml
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OzonEdu.MerchandiseService", "src\OzonEdu.MerchandiseService\OzonEdu.MerchandiseService.csproj", "{3D9A740A-1A11-4E9E-AA8B-88FF37C49F02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,16 +30,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{00894254-B1D4-4D78-B6E4-DAE0F13C115F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{00894254-B1D4-4D78-B6E4-DAE0F13C115F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{00894254-B1D4-4D78-B6E4-DAE0F13C115F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{00894254-B1D4-4D78-B6E4-DAE0F13C115F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D9A740A-1A11-4E9E-AA8B-88FF37C49F02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D9A740A-1A11-4E9E-AA8B-88FF37C49F02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D9A740A-1A11-4E9E-AA8B-88FF37C49F02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D9A740A-1A11-4E9E-AA8B-88FF37C49F02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{00894254-B1D4-4D78-B6E4-DAE0F13C115F} = {E3DF095C-5306-4416-84D5-ED0C39BDC4EF}
+		{3D9A740A-1A11-4E9E-AA8B-88FF37C49F02} = {E3DF095C-5306-4416-84D5-ED0C39BDC4EF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {045F1836-B173-4D18-81EE-1BDDCF9B4F10}

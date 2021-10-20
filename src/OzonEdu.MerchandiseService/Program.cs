@@ -1,4 +1,4 @@
-﻿namespace OzonEdu.MerchandiseApi
+﻿namespace OzonEdu.MerchandiseService
 {
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Hosting;

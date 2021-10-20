@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "OzonEdu.MerchandiseApi": {
+    "OzonEdu.MerchandiseService": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

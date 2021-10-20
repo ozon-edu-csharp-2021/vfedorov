@@ -16,7 +16,7 @@ services:
   merchandise-service:
     build:
       context: ../
-      dockerfile: src/OzonEdu.MerchandiseApi/Dockerfile
+      dockerfile: src/OzonEdu.MerchandiseService/Dockerfile
     ports:
       - "8080:80"
       - "8083:443"
