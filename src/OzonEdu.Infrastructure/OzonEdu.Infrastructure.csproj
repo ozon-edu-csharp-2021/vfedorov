@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore.Server" Version="2.40.0" />
+    <PackageReference Include="Grpc.Core.Api" Version="2.41.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OzonEdu.Extensions\OzonEdu.Extensions.csproj" />
+    <ProjectReference Include="..\OzonEdu.Infrastructure.Contracts\OzonEdu.Infrastructure.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
