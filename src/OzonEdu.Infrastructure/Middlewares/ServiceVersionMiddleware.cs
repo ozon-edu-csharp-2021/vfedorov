@@ -5,26 +5,27 @@
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Http;
     using OzonEdu.Infrastructure.Contracts;
+    using OzonEdu.Infrastructure.Services;
 
     public class ServiceVersionMiddleware
     {
         private readonly RequestDelegate next;
+        private readonly IServiceVersionProvider serviceVersionProvider;
         private readonly JsonSerializerOptions serializerOptions;
 
-        public ServiceVersionMiddleware(RequestDelegate next)
+        public ServiceVersionMiddleware(RequestDelegate next, IServiceVersionProvider serviceVersionProvider = null)
         {
             this.next = next;
-
+            this.serviceVersionProvider = serviceVersionProvider ?? new ServiceVersionProviderStub();
             this.serializerOptions = new JsonSerializerOptions
             {
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
             };
         }
 
-        public async Task InvokeAsync(HttpContext context, IServiceVersionProvider serviceVersionProvider)
+        public async Task InvokeAsync(HttpContext context)
         {
             IServiceVersion info = await serviceVersionProvider.GetServiceVersionInfoAsync();
-            
             await context.Response.WriteAsJsonAsync(info, serializerOptions);
         }
 
