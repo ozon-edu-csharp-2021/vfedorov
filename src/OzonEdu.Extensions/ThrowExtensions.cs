@@ -19,5 +19,14 @@
                 throw new ArgumentNullException(parmName);
             }
         }
+
+        public static void ThrowIfNull<TArg, TException>(this TArg value, TException exception)
+            where TException : Exception
+        {
+            if (value is null)
+            {
+                throw exception;
+            }
+        }
     }
 }

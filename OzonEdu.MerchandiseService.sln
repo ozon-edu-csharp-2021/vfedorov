@@ -28,13 +28,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OzonEdu.Infrastructure", "s
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OzonEdu.Infrastructure.Contracts", "src\OzonEdu.Infrastructure.Contracts\OzonEdu.Infrastructure.Contracts.csproj", "{E6C18B54-8974-46AB-87C9-A6CED0D0DC18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonEdu.MerchandiseService.Grpc", "src\OzonEdu.MerchandiseService.Grpc\OzonEdu.MerchandiseService.Grpc.csproj", "{8B601122-48B2-469B-AA63-16B3EBF033FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OzonEdu.MerchandiseService.Grpc", "src\OzonEdu.MerchandiseService.Grpc\OzonEdu.MerchandiseService.Grpc.csproj", "{8B601122-48B2-469B-AA63-16B3EBF033FE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OzonEdu.Extensions", "src\OzonEdu.Extensions\OzonEdu.Extensions.csproj", "{BCA72DCA-33C9-497D-A22E-4C36DFC519E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonEdu.MerchandiseService.Models", "src\OzonEdu.MerchandiseService.Models\OzonEdu.MerchandiseService.Models.csproj", "{D86E66C6-0905-47DE-984D-2B980A4DFC07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OzonEdu.MerchandiseService.Models", "src\OzonEdu.MerchandiseService.Models\OzonEdu.MerchandiseService.Models.csproj", "{D86E66C6-0905-47DE-984D-2B980A4DFC07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonEdu.MerchandiseService.HttpClient", "src\OzonEdu.MerchandiseService.HttpClient\OzonEdu.MerchandiseService.HttpClient.csproj", "{904A26E4-2170-4315-B7AF-9B9B5AEC602A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OzonEdu.MerchandiseService.HttpClient", "src\OzonEdu.MerchandiseService.HttpClient\OzonEdu.MerchandiseService.HttpClient.csproj", "{904A26E4-2170-4315-B7AF-9B9B5AEC602A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonEdu.MerchandiseService.Domain", "src\OzonEdu.MerchandiseService.Domain\OzonEdu.MerchandiseService.Domain.csproj", "{9300C067-3184-47ED-939B-13B06072F3F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonEdu.MerchandiseService.Domain.Tests", "tests\OzonEdu.MerchandiseService.Domain.Tests\OzonEdu.MerchandiseService.Domain.Tests.csproj", "{754A4445-A056-44AD-A2C9-6B7815CB2034}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -70,6 +74,14 @@ Global
 		{904A26E4-2170-4315-B7AF-9B9B5AEC602A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{904A26E4-2170-4315-B7AF-9B9B5AEC602A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{904A26E4-2170-4315-B7AF-9B9B5AEC602A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9300C067-3184-47ED-939B-13B06072F3F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9300C067-3184-47ED-939B-13B06072F3F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9300C067-3184-47ED-939B-13B06072F3F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9300C067-3184-47ED-939B-13B06072F3F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{754A4445-A056-44AD-A2C9-6B7815CB2034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{754A4445-A056-44AD-A2C9-6B7815CB2034}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{754A4445-A056-44AD-A2C9-6B7815CB2034}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{754A4445-A056-44AD-A2C9-6B7815CB2034}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,6 +94,8 @@ Global
 		{BCA72DCA-33C9-497D-A22E-4C36DFC519E0} = {E3DF095C-5306-4416-84D5-ED0C39BDC4EF}
 		{D86E66C6-0905-47DE-984D-2B980A4DFC07} = {E3DF095C-5306-4416-84D5-ED0C39BDC4EF}
 		{904A26E4-2170-4315-B7AF-9B9B5AEC602A} = {E3DF095C-5306-4416-84D5-ED0C39BDC4EF}
+		{9300C067-3184-47ED-939B-13B06072F3F1} = {E3DF095C-5306-4416-84D5-ED0C39BDC4EF}
+		{754A4445-A056-44AD-A2C9-6B7815CB2034} = {6D618DC2-D006-48A8-BC13-9B4959339780}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {045F1836-B173-4D18-81EE-1BDDCF9B4F10}
