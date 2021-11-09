@@ -3,6 +3,11 @@ version: "3.8"
 services:
   supply-service:
     image: ghcr.io/ozon-edu-csharp-2021/supply-service:main
+    depends_on:
+      db-supply:
+        condition: service_healthy
+    environment:
+      DbConfiguration__ConnectionString: Host=db-supply;Port=5432;Database=supply-service;Username=supply;Password=${SUPPLY_SERVICE_DB_PASSWORD};
 
   emailing-service:
     image: ghcr.io/ozon-edu-csharp-2021/emailing-service:main
@@ -20,5 +25,30 @@ services:
     ports:
       - "8080:80"
       - "8083:443"
+
+  db-supply:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: supply
+      POSTGRES_PASSWORD_FILE: /run/secrets/supply-service-db-secret
+      POSTGRES_DB: supply-service
+    volumes:
+      - vol-db-supply:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "supply" ]
+      interval: 5s
+      retries: 5
+    restart: always
+    ports:
+      - "55050:5432" # for debug purpose
+    secrets:
+      - supply-service-db-secret
+
+volumes:
+  vol-db-supply:
   
+secrets:
+  supply-service-db-secret:
+    file: ./supply-service-db.secret
+
 
