@@ -7,7 +7,7 @@
     using System.Threading.Tasks;
     using OzonEdu.MerchandiseService.Models;
 
-    public class MerchandiseServiceClient
+    public class MerchandiseServiceClient : IMerchandiseServiceClient
     {
         private readonly HttpClient httpClient;
 
@@ -35,8 +35,6 @@
             using var content = new StringContent(serializedData, Encoding.UTF8, "application/json");
 
             using var response = await httpClient.PostAsync("api/v1/merch", content, cancellationToken);
-
-            // TODO decide what to do with response
         }
     }
 }
