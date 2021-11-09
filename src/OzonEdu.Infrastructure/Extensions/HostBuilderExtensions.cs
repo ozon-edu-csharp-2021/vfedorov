@@ -9,6 +9,7 @@
     using System.Collections.Generic;
     using OzonEdu.Infrastructure.Interceptors;
     using OzonEdu.Infrastructure.Filters;
+    using OzonEdu.Infrastructure.Swagger;
 
     public static class HostBuilderExtensions
     {
@@ -37,6 +38,8 @@
                     options.SwaggerDoc("v1", new OpenApiInfo { Title = "OzonEdu.MerchandiseService", Version = "v1" });
 
                     options.CustomSchemaIds(x => x.FullName);
+
+                    options.OperationFilter<HeaderOperationFilter>();
                 });
 
                 services.AddGrpc(options =>
