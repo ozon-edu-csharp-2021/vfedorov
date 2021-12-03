@@ -1,0 +1,46 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "OzonEdu.MerchandiseService.Grpc";
+package MerchandiseService;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+service MerchandiseServiceGrpc {
+    // issues metch to the specified employee
+    rpc IssueMerch(IssueMerchRequest) returns (google.protobuf.Empty);
+
+    // gets merch issued to the specified employee
+    rpc GetIssuedMerch(GetIssuedMerchRequest) returns (GetIssuedMerchResponse);
+}
+
+// 
+message IssueMerchRequest {
+    int64 employee_id = 1;
+    MerchType merch_type = 2;
+}
+
+// 
+message GetIssuedMerchRequest {
+    int64 employee_id = 1;
+}
+
+// issued merch
+message GetIssuedMerchResponse {
+    repeated IssuedMerch merch = 1;
+}
+
+message IssuedMerch {
+    MerchType merch_type = 1;
+    google.protobuf.Timestamp issue_date = 2;
+}
+
+// types of merch
+enum MerchType {
+    NONE = 0;
+    WELCOME_PACK = 10;
+    CONFERENCE_LISTENER_PACK = 20;
+    CONFERENCE_SPEAKER_PACK = 30;
+    PROBATION_PERIOD_ENDING_PACK = 40;
+    VETERAN_PACK = 50;
+}

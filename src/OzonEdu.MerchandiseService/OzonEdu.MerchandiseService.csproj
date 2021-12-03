@@ -5,10 +5,17 @@
     <UserSecretsId>7e1260e6-e926-402c-8bb8-d64fa35ce4f5</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..</DockerfileContext>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OzonEdu.Infrastructure\OzonEdu.Infrastructure.csproj" />
+    <ProjectReference Include="..\OzonEdu.MerchandiseService.Grpc\OzonEdu.MerchandiseService.Grpc.csproj" />
+    <ProjectReference Include="..\OzonEdu.MerchandiseService.Models\OzonEdu.MerchandiseService.Models.csproj" />
   </ItemGroup>
 
 </Project>

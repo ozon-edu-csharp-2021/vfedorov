@@ -2,6 +2,7 @@
 {
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Hosting;
+    using OzonEdu.Infrastructure.Extensions;
 
     public class Program
     {
@@ -15,6 +16,8 @@
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
+                })
+                .AddInfrastructure()
+                .AddHttp();
     }
 }
